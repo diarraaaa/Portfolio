@@ -241,7 +241,8 @@ footer img {
 
 /* Grid layout for project cards */
 #projets {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
     gap: 20px; /* Space between cards */
 }
