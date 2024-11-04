@@ -221,13 +221,6 @@ footer img {
     color: #5b3d25;
     margin-bottom: 20px;
 }
-#projets h1 {
-    text-align: center;
-    width: 100%;
-    font-size: 2em;
-    color: #5b3d25;
-    margin-bottom: 20px;
-}
 /* Project Section */
 #projets {
     padding: 20px;
@@ -237,16 +230,17 @@ footer img {
     text-align: center;
     color: #5b3d25;
     font-weight: bold;
+    margin-bottom: 20px; /* Space between heading and cards */
 }
 
 /* Grid layout for project cards */
 #projets {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
     gap: 20px; /* Space between cards */
 }
 
+/* Styling for each project card */
 .project {
     background-color: #ffffff;
     border-radius: 10px;
@@ -261,12 +255,14 @@ footer img {
 
 .project img {
     margin: 10px 0;
-    height: 150px; /* Adjust image height as needed */
+    height: 150px;
     width: auto;
     border-radius: 5px;
 }
-
-.project p {
-    margin-top: 10px;
-    font-size: 14px;
+#projets h1 {
+    text-align: center;
+    width: 100%;
+    font-size: 2em;
+    color: #5b3d25;
+    margin-bottom: 20px;
 }
