@@ -221,6 +221,13 @@ footer img {
     color: #5b3d25;
     margin-bottom: 20px;
 }
+#projets h1 {
+    text-align: center;
+    width: 100%;
+    font-size: 2em;
+    color: #5b3d25;
+    margin-bottom: 20px;
+}
 /* Project Section */
 #projets {
     padding: 20px;
