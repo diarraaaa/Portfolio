@@ -1,0 +1,223 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5dc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header and Navigation styling */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #8b5c3b;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #d1c8b5;
+    color: #5b3d25;
+}
+
+/* Presentation section */
+#Presentation {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 1.1em;
+    color: #4b3d2b;
+    line-height: 1.6;
+}
+
+/* Competence section */
+#competence {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: #f9f9f3;
+}
+
+#competence > div {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%; /* Three cards per row */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-weight: bold;
+    color: #5b3d25;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the items */
+    text-align: center; 
+}
+.competence-item img {
+    margin: 10px 0; /* Space between text and image */
+    height: 40px; /* Set image height */
+}
+#competence h1 {
+    text-align: center;
+    width: 100%;
+    font-size: 2em;
+    color: #5b3d25;
+    margin-bottom: 20px;
+}
+/* Progress bar styles */
+.bar1, .bar2, .bar3, .bar4, .bar5, .bar6, .bar7, .bar8{
+    height: 20px;
+    border-radius: 10px;
+    background-color: #f5e6d3; /* Beige background */
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+    width: 100%; /* Make progress bars wider */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Set initial width to 0% */
+.bar1::after, .bar2::after, .bar3::after, .bar4::after, .bar5::after, .bar6::after, .bar7::after, .bar8::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 0; /* Start with empty bars */
+    background-color: #8b5c3b; /* Darker beige for progress fill */
+    transition: width 0.5s ease; /* Smooth transition for width */
+}
+
+/* Hover effect to fill the bars */
+.bar1:hover::after {
+    width: 60%; /* Adjust percentage */
+}
+
+.bar2:hover::after {
+    width: 75%; /* Adjust percentage */
+}
+
+.bar3:hover::after {
+    width: 40%; /* Adjust percentage */
+}
+
+.bar4:hover::after {
+    width: 55%; /* Adjust percentage */
+}
+
+.bar5:hover::after {
+    width: 60%; /* Adjust percentage */
+}
+
+.bar6:hover::after {
+    width: 55%; /* Adjust percentage */
+}
+.bar7:hover::after {
+    width: 80%; /* Adjust percentage */
+}
+.bar8:hover::after {
+    width: 80%; /* Adjust percentage */
+}
+
+/* Footer styling */
+footer {
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+}
+
+footer a {
+    text-decoration: none;
+    color: #8b5c3b;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+footer img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+#pro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Space between cards */
+    padding: 40px 20px;
+    background-color: #f9f9f3; /* Light background for the pro section */
+}
+
+.stage {
+    background: linear-gradient(135deg, #f9f9f9, #ffffff); /* Subtle gradient background */
+    border-radius: 15px; /* Rounded corners */
+    padding: 25px; /* More padding for spacious feel */
+    width: 48%; /* Two cards per row */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow for depth */
+    text-align:center; /* Align text to the left */
+    font-weight: bold;
+    color: #5b3d25;
+    margin-bottom: 20px; /* Space between rows */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animations */
+    position: relative; /* Positioning for pseudo-elements */
+}
+
+.stage::before {
+    content: '';
+    position: absolute; /* Create an overlay effect */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.1); /* Slight white overlay */
+    border-radius: 15px; /* Match card corners */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Fade effect */
+}
+
+.stage:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+.stage:hover::before {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.stage h1 {
+    font-size: 1.6em; /* Larger heading */
+    margin-bottom: 15px; /* Space below heading */
+    color: #8b5c3b; /* Different color for the heading */
+    text-transform: uppercase; /* Uppercase for emphasis */
+}
+
+.stage p {
+    font-size: 1em; /* Standard size for text */
+    line-height: 1.6; /* Increased line height for readability */
+    color: #444; /* Darker color for better contrast */
+}
+
+
+#pro h1 {
+    text-align: center;
+    width: 100%;
+    font-size: 2em;
+    color: #5b3d25;
+    margin-bottom: 20px;
+}
