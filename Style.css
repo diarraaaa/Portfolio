@@ -223,8 +223,12 @@ footer img {
 }
 /* Project Section */
 #projets {
-    padding: 20px;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Space between cards */
+    padding: 40px 20px;
+    background-color: #f9f9f3; /* Light background for the pro section */
 }
 
 #projets h1 {
