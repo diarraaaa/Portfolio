@@ -243,11 +243,14 @@ footer img {
     position: relative; /* Positioning for pseudo-elements */
 }
 .project img {
-    width: 80%; /* Limit width for images */
-    max-width: 200px; /* Prevent images from getting too large */
+    width: 100%; /* Make the image fill the container width */
+    max-width: 250px; /* Limit the maximum width to 250px (adjust if needed) */
+    height: auto; /* Maintain aspect ratio */
     margin-top: 20px;
     border-radius: 10px;
+    object-fit: cover; /* Ensures images don't stretch if they have different aspect ratios */
 }
+
 
 .project::before {
     content: '';
