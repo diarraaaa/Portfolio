@@ -164,7 +164,7 @@ footer img {
     background-color: #f9f9f3; /* Light background for the pro section */
 }
 
-.stage {
+.project {
     background: linear-gradient(135deg, #f9f9f9, #ffffff); /* Subtle gradient background */
     border-radius: 15px; /* Rounded corners */
     padding: 25px; /* More padding for spacious feel */
@@ -178,7 +178,7 @@ footer img {
     position: relative; /* Positioning for pseudo-elements */
 }
 
-.stage::before {
+.project::before {
     content: '';
     position: absolute; /* Create an overlay effect */
     top: 0;
@@ -191,23 +191,23 @@ footer img {
     transition: opacity 0.3s ease; /* Fade effect */
 }
 
-.stage:hover {
+.project:hover {
     transform: translateY(-5px); /* Lift effect on hover */
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
 }
 
-.stage:hover::before {
+.project:hover::before {
     opacity: 1; /* Show overlay on hover */
 }
 
-.stage h1 {
+.project h1 {
     font-size: 1.6em; /* Larger heading */
     margin-bottom: 15px; /* Space below heading */
     color: #8b5c3b; /* Different color for the heading */
     text-transform: uppercase; /* Uppercase for emphasis */
 }
 
-.stage p {
+.project p {
     font-size: 1em; /* Standard size for text */
     line-height: 1.6; /* Increased line height for readability */
     color: #444; /* Darker color for better contrast */
@@ -215,6 +215,71 @@ footer img {
 
 
 #pro h1 {
+    text-align: center;
+    width: 100%;
+    font-size: 2em;
+    color: #5b3d25;
+    margin-bottom: 20px;
+}
+#projets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Space between cards */
+    padding: 40px 20px;
+    background-color: #f9f9f3; /* Light background for the projets section */
+}
+
+.project {
+    background: linear-gradient(135deg, #f9f9f9, #ffffff); /* Subtle gradient background */
+    border-radius: 15px; /* Rounded corners */
+    padding: 25px; /* More padding for spacious feel */
+    width: 48%; /* Two cards per row */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow for depth */
+    text-align:center; /* Align text to the left */
+    font-weight: bold;
+    color: #5b3d25;
+    margin-bottom: 20px; /* Space between rows */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animations */
+    position: relative; /* Positioning for pseudo-elements */
+}
+
+.project::before {
+    content: '';
+    position: absolute; /* Create an overlay effect */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.1); /* Slight white overlay */
+    border-radius: 15px; /* Match card corners */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Fade effect */
+}
+
+.project:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+.project:hover::before {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.project h1 {
+    font-size: 1.6em; /* Larger heading */
+    margin-bottom: 15px; /* Space below heading */
+    color: #8b5c3b; /* Different color for the heading */
+    text-transform: uppercase; /* Uppercase for emphasis */
+}
+
+.project p {
+    font-size: 1em; /* Standard size for text */
+    line-height: 1.6; /* Increased line height for readability */
+    color: #444; /* Darker color for better contrast */
+}
+
+
+#projets h1 {
     text-align: center;
     width: 100%;
     font-size: 2em;
