@@ -224,7 +224,7 @@ footer img {
 /* Project Section */
 #projets {
     text-align: center;
-    display: block; /* Change to block to ensure the title is separated from the cards */
+    display: block; /* Assures that the section behaves like a block element */
     padding: 40px 20px;
     background-color: #f9f9f3; /* Light background for the pro section */
 }
@@ -236,7 +236,7 @@ footer img {
     font-weight: bold;
     margin-bottom: 20px;
     text-align: center;
-    display: block; /* Ensures the title stays on its own line */
+    display: block; /* Keeps the title on its own line */
 }
 
 /* Styling for each project card */
@@ -250,15 +250,22 @@ footer img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px; /* Adds space between the title and project cards */
-    width: 48%; /* Keep it responsive, two cards per row */
+    margin-top: 20px; /* Space between the title and the cards */
+    width: 48%; /* Two cards per row, responsive */
     box-sizing: border-box;
 }
 
-/* Ensure cards are on separate lines if necessary */
+/* Ensure images are properly styled */
 #projets .project img {
     margin: 10px 0;
     height: 150px;
     width: auto;
     border-radius: 5px;
+}
+
+/* Make the project cards responsive */
+@media (max-width: 768px) {
+    #projets .project {
+        width: 100%; /* On smaller screens, cards will take up the full width */
+    }
 }
