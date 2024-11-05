@@ -230,6 +230,17 @@ footer img {
 }
 
 /* Title styling */
+/* Styling for the project section */
+#projets {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between; /* Space out the items evenly */
+    padding: 40px 20px;
+    background-color: #f9f9f3; /* Light background for the project section */
+}
+
+/* Title styling */
 #projets h1 {
     font-size: 2em;
     color: #5b3d25;
@@ -248,14 +259,14 @@ footer img {
     text-align: center;
     color: #5b3d25;
     display: flex;
-    flex-direction:row;
+    flex-direction: column; /* Arrange content vertically within each card */
     align-items: center;
     margin-top: 20px; /* Space between the title and the cards */
-    width: 48%; /* Two cards per row, responsive */
+    width: 48%; /* Two cards per row */
     box-sizing: border-box;
 }
 
-/* Ensure images are properly styled */
+/* Styling for images inside project cards */
 #projets .project img {
     margin: 10px 0;
     height: 150px;
