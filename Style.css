@@ -221,14 +221,6 @@ footer img {
     color: #5b3d25;
     margin-bottom: 20px;
 }
-/* Project Section */
-#projets {
-    text-align: center;
-    display: block; /* Assures that the section behaves like a block element */
-    padding: 40px 20px;
-    background-color: #f9f9f3; /* Light background for the pro section */
-}
-
 /* Title styling */
 /* Styling for the project section */
 #projets {
