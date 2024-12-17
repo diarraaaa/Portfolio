@@ -207,6 +207,11 @@ footer img {
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animations */
     position: relative; /* Positioning for pseudo-elements */
 }
+.project img{
+    max-width: 100%;
+    height: auto;
+    
+}
 
 .project::before {
     content: '';
