@@ -206,7 +206,7 @@ footer img {
     margin-bottom: 20px; /* Space between rows */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animations */
     position: relative; /* Positioning for pseudo-elements */
-    height: 70px;
+    height: 75px;
 }
 .project img{
     max-width: 100%;
