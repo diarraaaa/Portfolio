@@ -45,7 +45,7 @@ nav ul li a:hover {
     text-align: center;
     padding: 40px 20px;
     font-size: 1.1em;
-    color: #000000;
+    color: #ffffff;
     line-height: 1.6;
 }
 
@@ -80,7 +80,7 @@ nav ul li a:hover {
     text-align: center;
     width: 100%;
     font-size: 2em;
-    color: #000000;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 /* Progress bar styles */
@@ -195,14 +195,14 @@ footer img {
     transition: opacity 0.3s ease; /* Fade effect */
 }
 .project {
-    background: linear-gradient(135deg, #100db3, #101448); /* Subtle gradient background */
+    background: #101448; /* Subtle gradient background */
     border-radius: 15px; /* Rounded corners */
     padding: 25px; /* More padding for spacious feel */
     width: 40%; /* Two cards per row */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow for depth */
     text-align:center; /* Align text to the left */
     font-weight: bold;
-    color: #5b3d25;
+    color: #ffffff;
     margin-bottom: 20px; /* Space between rows */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animations */
     position: relative; /* Positioning for pseudo-elements */
@@ -247,7 +247,7 @@ footer img {
     text-align: center;
     width: 100%;
     font-size: 2em;
-    color: #5b3d25;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 .project:hover {
@@ -262,7 +262,7 @@ footer img {
 .project h1 {
     font-size: 1.6em; /* Larger heading */
     margin-bottom: 15px; /* Space below heading */
-    color: #8b5c3b; /* Different color for the heading */
+    color: #ffffff; /* Different color for the heading */
     text-transform: uppercase; /* Uppercase for emphasis */
 }
 
