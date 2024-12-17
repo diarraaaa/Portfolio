@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="Style.css">
+        <title>My portfolio</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#Presentation">Presentation</a></li>
+                    <li><a href="#competence">Skills</a></li>
+                    <li><a href="#pro">Professional Experience</a></li>
+                    <li><a href="#projets">My Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                    <li><a href="Resume.pdf" download="Resume of  Diarra Dieng">My Resume</a></li>
+                    <li id="language"><a href="index.html">FR</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="Presentation">
+            <h1>Presentation</h1>
+            I am Mame Diarra Dieng, a Higher Technician in Computer Science, currently in my first year of the engineering cycle in Computer Science at the École Supérieure Polytechnique of Dakar. My academic background and professional experiences have allowed me to develop strong skills in web development, database management, and problem-solving.<br>
+            My academic projects and internships have enabled me to work with various programming languages such as Java, HTML, Python, and PHP, as well as technologies like Elasticsearch and relational and NoSQL databases. I am particularly interested in the fields of artificial intelligence, data analysis, and web development.
+        </div>
+        <div id="competence">
+            <h1>Skills</h1>
+            <div class="competence-item">Database Management
+                <img src="base.png" alt="base">
+                <div class="bar1"></div>
+            </div>
+            <div class="competence-item">Web Development
+                <img src="web.jpg" alt="">
+                <div class="bar2"></div>
+            </div>
+            <div class="competence-item">Java
+                <img src="java.png" alt="">
+                <div class="bar3"></div>
+            </div>
+            <div class="competence-item">Elasticsearch
+                <img src="elk.png" alt="">
+                <div class="bar4"></div>
+            </div>
+            <div class="competence-item">PHP
+                <img src="php.png" alt="">
+                <div class="bar5"></div>
+            </div>
+            <div class="competence-item">Python
+                <img src="python.png" alt="">
+                <div class="bar6"></div>
+            </div>
+            <div class="competence-item">Website Creation with No-Code Tools (Wix, Odoo, etc.)
+                <img src="nocode.png" alt="">
+                <div class="bar7"></div>
+            </div>
+            <div class="competence-item">Designing
+                <img src="design.png" alt="">
+                <div class="bar8"></div>
+            </div>
+        </div>
+        <div id="pro">
+            <h1>Professional Experience</h1>
+            <div class="stage">
+                <h3>End-of-DUT Internship</h3>
+                <p>Location: <br><img src="sonatel.png" alt="SONATEL" height="40px"></p>
+                <p>Duration: <br> 2 months 15 days</p>
+                <p>Topic: <br>Setting up a Data Ingestion Pipeline with Elasticsearch<br><img src="elk.png" alt="Elasticsearch" height="70px"></p>
+                <p>Internship Summary: <br>Implementation of a data ingestion pipeline using the Elastic Stack suite (Elasticsearch, Logstash, Kibana). During this internship, I was responsible for extracting data from log files, parsing, and transforming it into dashboards containing various visualizations to make information more accessible and understandable for other team members.</p>
+            </div>
+        </div>
+        <div id="projets">
+            <h1>Projects (Available on my Github)</h1>
+            <div class="project">
+                <h3>Old Portfolio</h3>
+                <img src="site1.png" alt="" height="300px" width="500px">
+            </div>
+            <div class="project">
+                <h3>Web Notes Application</h3>
+                <img src="notebook.png" alt="" height="300px" width="500px">
+            </div>
+            <div class="project">
+                <h3>Java Console Application</h3>
+                <img src="console.png" alt="" height="300px" width="500px">
+            </div>
+            <div class="project">
+                <h3>Web Application using Flask (Python) (Unfinished)</h3>
+                <img src="python.png" alt="" height="300px" width="500px">
+            </div>
+        </div>
+        <footer id="contact">
+            <a href="mailto:mamediarradieng@esp.sn"><img src="gmail.png" alt="Gmail icon" height="20px"></a>
+            <a href="https://www.linkedin.com/in/diarradieng04/"><img src="linkedin.png" alt="Linkedin icon" height="20px"></a>
+            <a href="https://github.com/diarraaaa"><img src="git.png" alt="Github" height="20px"></a>
+        </footer>
+    </body>
+</html>
