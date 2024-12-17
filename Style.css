@@ -169,14 +169,14 @@ footer img {
 }
 
 .stage {
-    background: linear-gradient(135deg, #f9f9f9, #ffffff); /* Subtle gradient background */
+    background: #101448; /* Subtle gradient background */
     border-radius: 15px; /* Rounded corners */
     padding: 25px; /* More padding for spacious feel */
     width: 48%; /* Two cards per row */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow for depth */
     text-align:center; /* Align text to the left */
     font-weight: bold;
-    color: #5b3d25;
+    color: #ffffff;
     margin-bottom: 20px; /* Space between rows */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animations */
     position: relative; /* Positioning for pseudo-elements */
@@ -270,7 +270,7 @@ footer img {
     text-align: center;
     width: 100%;
     font-size: 2em;
-    color: #5b3d25;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 .language{
