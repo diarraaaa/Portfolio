@@ -48,6 +48,10 @@ nav ul li a:hover {
     color: #ffffff;
     line-height: 1.6;
     background-image: url(code.jpg);
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 500px;
 }
 
 /* Competence section */
