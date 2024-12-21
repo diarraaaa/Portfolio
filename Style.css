@@ -51,12 +51,11 @@ nav ul li a:hover {
 
 /* Competence section */
 #competence {
-  overflow-x:scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
-}
-.competence-item{
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 40px 20px;
 }
 
 #competence > div {
@@ -68,6 +67,8 @@ nav ul li a:hover {
     text-align: center;
     font-weight: bold;
     color: #ffffff;
+    display: flex;
+    flex-direction: column;
     align-items: center; /* Center align the items */
     text-align: center; 
 }
@@ -81,58 +82,6 @@ nav ul li a:hover {
     font-size: 2em;
     color: #ffffff;
     margin-bottom: 20px;
-}
-/* Progress bar styles */
-.bar1, .bar2, .bar3, .bar4, .bar5, .bar6, .bar7, .bar8{
-    height: 20px;
-    border-radius: 10px;
-    background-color: #b8b8b89c; /* Beige background */
-    margin-top: 10px;
-    overflow: hidden;
-    position: relative;
-    width: 100%; /* Make progress bars wider */
-    transition: background-color 0.3s; /* Smooth transition for background color */
-}
-
-/* Set initial width to 0% */
-.bar1::after, .bar2::after, .bar3::after, .bar4::after, .bar5::after, .bar6::after, .bar7::after, .bar8::after {
-    content: '';
-    display: block;
-    height: 100%;
-    width: 0; /* Start with empty bars */
-    background-color: #000000; /* Darker beige for progress fill */
-    transition: width 0.5s ease; /* Smooth transition for width */
-}
-
-/* Hover effect to fill the bars */
-.bar1:hover::after {
-    width: 60%; /* Adjust percentage */
-}
-
-.bar2:hover::after {
-    width: 75%; /* Adjust percentage */
-}
-
-.bar3:hover::after {
-    width: 40%; /* Adjust percentage */
-}
-
-.bar4:hover::after {
-    width: 55%; /* Adjust percentage */
-}
-
-.bar5:hover::after {
-    width: 60%; /* Adjust percentage */
-}
-
-.bar6:hover::after {
-    width: 55%; /* Adjust percentage */
-}
-.bar7:hover::after {
-    width: 80%; /* Adjust percentage */
-}
-.bar8:hover::after {
-    width: 80%; /* Adjust percentage */
 }
 
 /* Footer styling */
