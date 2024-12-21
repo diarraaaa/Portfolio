@@ -74,7 +74,7 @@ nav ul li a:hover {
     align-content: center;
     
 }
-#competence .competence-item{
+#competence .competence-item:hover{
     transform: translateY(-5px); /* Lift effect on hover */
     box-shadow: 0 8px 30px rgb(255, 255, 255); /* Darker shadow on hover */
 }
