@@ -49,14 +49,17 @@ nav ul li a:hover {
     line-height: 1.6;
 }
 
-/* Competence section */
 #competence {
-    display: flex;
-    flex-wrap:wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 10px;
-    padding: 20px 20px;
+    padding: 2em;
+    text-align: center;
+}
+
+#competence h1 {
+    margin-bottom: 1em;
+    font-size: 2em;
+    color: #blue;
+    display:flex;
+    flex-direction:row;
 }
 
 .competence-item {
@@ -64,7 +67,7 @@ nav ul li a:hover {
     width: 20%;
     margin: 1em;
     padding: 1em;
-    background-color: white;
+    background-color: black;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -82,13 +85,7 @@ nav ul li a:hover {
     margin-top: 1em;
     border-radius: 5px;
 }
-#competence h1 {
-    text-align: center;
-    width: 100%;
-    font-size: 2em;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
+
 
 /* Footer styling */
 footer {
