@@ -51,11 +51,12 @@ nav ul li a:hover {
 
 /* Competence section */
 #competence {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-    padding: 40px 20px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.competence-item{
+    display: inline-block;
 }
 
 #competence > div {
