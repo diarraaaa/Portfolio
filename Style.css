@@ -51,7 +51,7 @@ nav ul li a:hover {
 
 /* Competence section */
 #competence {
-  overflow-x: hidden;
+  overflow-x:scroll;
   overflow-y: hidden;
   white-space: nowrap;
 }
