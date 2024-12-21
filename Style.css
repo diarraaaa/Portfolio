@@ -52,15 +52,15 @@ nav ul li a:hover {
 /* Competence section */
 #competence {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
     flex-direction: row;
     justify-content: space-around;
-    gap: 20px;
-    padding: 40px 20px;
+    gap: 10px;
+    padding: 20px 20px;
 }
 
 #competence .competence-item {
-    background-color:#101448;
+    background-color:#000000;
     border-radius: 10px;
     padding: 20px;
     width: 20%; /* Three cards per row */
