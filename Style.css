@@ -58,7 +58,7 @@ nav ul li a:hover {
     padding: 40px 20px;
 }
 
-#competence > div {
+#competence .competence-item {
     background-color:#101448;
     border-radius: 10px;
     padding: 20px;
