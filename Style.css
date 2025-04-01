@@ -1,88 +1,402 @@
-/* General styling */
-body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(150deg, #184cc6, #101448);
-    color: #333;
+/* Variables pour les couleurs */
+:root {
+    --beige-clair: #f5f2e9;
+    --beige: #e6dcc6;
+    --beige-fonce: #d4c9a8;
+    --noir: #1a1a1a;
+    --gris-fonce: #333333;
+    --accent: #a18d62;
+}
+  
+/* Reset et styles de base */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-/* Header and Navigation styling */
+  
+body {
+    background-color: var(--beige-clair);
+    color: var(--noir);
+    line-height: 1.6;
+}
+  
+/* En-tête et Navigation */
 header {
-    background-color: #101448;
+    background-color: var(--noir);
     padding: 20px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
-
+  
 nav ul {
-    list-style-type: none;
-    padding: 0;
     display: flex;
     justify-content: center;
-    margin: 0;
+    list-style: none;
+    flex-wrap: wrap;
 }
-
+  
 nav ul li {
     margin: 0 15px;
 }
-
+  
 nav ul li a {
+    color: var(--beige);
     text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
 }
-
+  
 nav ul li a:hover {
-    background-color: #d1c8b500;
-    color: #c7c9cf;
+    color: var(--beige-fonce);
+    border-bottom: 2px solid var(--accent);
+}
+  
+/* Sections principales */
+div[id] {
+    padding: 60px 10%;
+    margin-bottom: 20px;
+}
+  
+div[id]:nth-child(odd) {
+    background-color: var(--beige);
+}
+  
+div[id]:nth-child(even) {
+    background-color: var(--beige-clair);
+}
+  
+h1 {
+    font-size: 2.2rem;
+    color: var(--noir);
+    margin-bottom: 30px;
+    border-bottom: 3px solid var(--accent);
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
-/* Presentation section */
+/* Presentation Section Styles */
 #Presentation {
-    text-align: center;
-    padding: 40px 20px;
-    font-size: 1.1em;
-    color: #ffffff;
-    line-height: 1.6;
+    padding: 70px 10%;
 }
 
+.presentation-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--accent);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.bio {
+    flex: 1;
+}
+
+.bio p {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.highlight {
+    color: var(--accent);
+    font-weight: 600;
+}
+  
+/* Section compétences */
 #competence {
-    padding: 2em;
     text-align: center;
 }
-
+  
 #competence h1 {
-    margin-bottom: 1em;
-    font-size: 2em;
-    color: #blue;
-    display:flex;
-    text-align:center;
-    flex-direction:row;
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
 }
-
+  
 .competence-item {
     display: inline-block;
-    width: 20%;
-    margin: 1em;
-    padding: 1em;
-    background-color: black;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    width: 220px;
+    height: 190px;
+    margin: 15px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    font-weight: bold;
+    vertical-align: top;
 }
-
+  
 .competence-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+  
+.competence-item img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 15px auto 0;
+    object-fit: contain;
+}
+  
+/* Section expérience professionnelle */
+#pro {
+    padding: 70px 10%;
 }
 
-.competence-item img {
-    max-width: 100%;
-    height:70%;
-    margin-top: 1em;
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stage {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stage:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.stage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--beige);
+    padding-bottom: 15px;
+}
+
+.stage-header h3 {
+    color: var(--accent);
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.stage-date {
+    background-color: var(--beige);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.company-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.company-logo {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+.company-details h4 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.duration {
+    color: var(--gris-fonce);
+    font-size: 0.9rem;
+}
+
+.project-focus {
+    background-color: var(--beige-clair);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.project-focus h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--noir);
+}
+
+.tech-stack {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tech-logo {
+    height: 40px;
+    width: auto;
+}
+
+.responsibilities {
+    margin-bottom: 20px;
+}
+
+.responsibilities h4 {
+    margin-bottom: 10px;
+    color: var(--noir);
+}
+
+.responsibilities ul {
+    padding-left: 20px;
+}
+
+.responsibilities li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.achievements {
+    background-color: rgba(161, 141, 98, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent);
+}
+
+.achievements h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--noir);
+}
+  
+/* Section projets - Approche simplifiée */
+#projets {
+    text-align: center;
+}
+  
+#projets h1 {
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
+}
+  
+.project {
+    display: inline-block;
+    width: 30%; /* Trois cartes par ligne */
+    margin: 1.5%;
+    min-height: 250px;
+    background-color: white;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    vertical-align: top;
+}
+  
+.project h3 {
+    color: var(--accent);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+  
+.project img {
+    width: 100%;
+    height: 160px;
     border-radius: 5px;
+    margin-top: 10px;
+    object-fit: contain;
+}
+  
+/* Pied de page */
+footer {
+    background-color: var(--noir);
+    padding: 30px 0;
+    text-align: center;
+}
+  
+footer a {
+    margin: 0 15px;
+    display: inline-block;
+}
+  
+footer a img {
+    transition: transform 0.3s ease;
+}
+  
+footer a:hover img {
+    transform: scale(1.2);
+}
+  
+/* Media queries pour la responsivité */
+@media screen and (max-width: 992px) {
+    .project {
+        width: 45%;
+        margin: 2.5%;
+    }
+}
+  
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+    
+    div[id] {
+        padding: 40px 5%;
+    }
+    
+    .competence-item {
+        width: calc(50% - 30px);
+        height: 180px;
+        margin: 10px;
+    }
+    
+    .project {
+        width: 90%;
+        margin: 5%;
+    }
+    
+    .presentation-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+    
+    .stage-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .company-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+  
+@media screen and (max-width: 480px) {
+    .competence-item {
+        width: calc(100% - 30px);
+        height: 180px;
+    }
+    
+    .project img {
+        height: 150px;
+    }
+    
+    .project {
+        min-height: 220px;
+    }
 }

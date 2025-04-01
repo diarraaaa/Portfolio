@@ -1,36 +1,126 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site en maintenance</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            padding: 50px;
-        }
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            margin: auto;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1> Hello World,mon Portfolio revient bientôt !</h1>
-        <p>Site actuellement en maintenance. Merci de votre patience. BISOUS</p>
-    </div>
-</body>
+<html>
+    <head>
+        <link rel="stylesheet" href="Style.css">
+        <title>Mon Portfolio</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#Presentation">Présentation</a></li>
+                    <li><a href="#competence">Compétences</a></li>
+                    <li><a href="#pro">Expérience Professionnelle</a></li>
+                    <li><a href="#projets">Mes Projets</a></li>
+                    <li><a href="#contact">Contactez-moi</a></li>
+                    <li><a href="Resume.pdf" download="CV de Diarra Dieng">Mon CV</a></li>
+                    <li id="language"><a href="indexenglish.html">EN</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="Presentation">
+            <h1>Présentation</h1>
+            <div class="presentation-content">
+                <div class="bio">
+                    <p>Bonjour ! Je suis <span class="highlight">Mame Diarra Dieng</span>, étudiante en ingénierie informatique à la prestigieuse École Supérieure Polytechnique de Dakar. Avec une solide formation en tant que Technicienne Supérieure en Informatique, je combine expertise technique et approche innovante de résolution de problèmes.</p>
+                    
+                    <p>Ma passion réside dans la création de solutions efficaces et élégantes à travers le développement web, l'optimisation des bases de données et les technologies émergentes. Grâce à mes études et expériences professionnelles, j'ai développé un ensemble de compétences polyvalentes qui me permettent de relever des défis complexes avec confiance.</p>
+                    
+                    <p>Je suis constamment à la recherche de nouvelles technologies et méthodologies pour élargir mes capacités et fournir des résultats exceptionnels. Mon objectif est de mettre mes compétences au service de la création de solutions numériques impactantes qui font la différence.</p>
+                </div>
+            </div>
+        </div>
+        <div id="competence">
+            <h1>Compétences</h1>
+            <div class="competence-item">Gestion de Bases de Données
+                <img src="base.png" alt="base">
+            </div>
+            <div class="competence-item">Développement Web
+                <img src="web.jpg" alt="">
+            </div>
+            <div class="competence-item">Java
+                <img src="java.png" alt="">
+            </div>
+            <div class="competence-item">Elasticsearch
+                <img src="elk.png" alt="">
+            </div>
+            <div class="competence-item">PHP
+                <img src="php.png" alt="">
+            </div>
+            <div class="competence-item">Python
+                <img src="python.png" alt="">
+            </div>
+            <div class="competence-item">Création de Sites Web avec des Outils No-Code (Wix, Odoo, etc.)
+                <img src="nocode.png" alt="">
+            </div>
+            <div class="competence-item">Design
+                <img src="design.png" alt="">
+            </div>
+        </div>
+        <div id="pro">
+            <h1>Expérience Professionnelle</h1>
+            <div class="timeline">
+                <div class="stage">
+                    <div class="stage-header">
+                        <h3>Stage de fin de DUT : Ingénierie des Données</h3>
+                        <span class="stage-date">Juin - Août 2023</span>
+                    </div>
+                    <div class="stage-content">
+                        <div class="company-info">
+                            <img src="sonatel.png" alt="SONATEL" class="company-logo">
+                            <div class="company-details">
+                                <h4>SONATEL (Orange Sénégal)</h4>
+                                <p class="duration">2 mois 15 jours</p>
+                            </div>
+                        </div>
+                        <div class="project-focus">
+                            <h4>Focus du Projet : Pipeline d'Ingestion de Données avec Elasticsearch</h4>
+                            <div class="tech-stack">
+                                <img src="elk.png" alt="Elasticsearch" class="tech-logo">
+                                <span>Elastic Stack (ELK)</span>
+                            </div>
+                        </div>
+                        <div class="responsibilities">
+                            <h4>Responsabilités Clés :</h4>
+                            <ul>
+                                <li>Conception et implémentation d'un pipeline de données complet en utilisant la suite Elastic Stack</li>
+                                <li>Extraction et analyse de données complexes issues de multiples sources</li>
+                                <li>Développement de transformations de données personnalisées avec des configurations Logstash</li>
+                                <li>Création de tableaux de bord interactifs dans Kibana avec diverses visualisations</li>
+                                <li>Documentation complète du processus pour le transfert de connaissances</li>
+                            </ul>
+                        </div>
+                        <div class="achievements">
+                            <h4>Réalisations Clés :</h4>
+                            <p>Réduction du temps d'analyse des données grâce à une conception efficace du pipeline et à la génération automatisée de tableaux de bord, permettant à l'équipe de prendre des décisions basées sur les données plus rapidement.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Vous pouvez ajouter d'autres expériences en suivant la même structure -->
+            </div>
+        </div>
+        <div id="projets">
+            <h1>Projets (Disponibles sur mon Github)</h1>
+            <div class="project">
+            <h3>Ancien Portfolio</h3>
+            <img src="site1.png" alt="Ancien Portfolio" height="300px" width="500px">
+            </div>
+            <div class="project">
+            <h3>Application de Prise de Notes Web</h3>
+            <img src="notebook.png" alt="Application de Prise de Notes Web" height="300px" width="500px">
+            </div>
+            <div class="project">
+            <h3>Application Console en Java</h3>
+            <img src="console.png" alt="Application Console en Java" height="300px" width="500px">
+            </div>
+            <div class="project">
+            <h3>Application Web avec Flask (Python) (Inachevée)</h3>
+            <img src="python.png" alt="Application Web avec Flask (Python)" height="300px" width="500px">
+            </div>
+        </div>
+        <footer id="contact">
+            <a href="mailto:mamediarradieng@esp.sn"><img src="gmail.png" alt="Icône Gmail" height="20px"></a>
+            <a href="https://www.linkedin.com/in/diarradieng04/"><img src="linkedin.png" alt="Icône Linkedin" height="20px"></a>
+            <a href="https://github.com/diarraaaa"><img src="git.png" alt="Github" height="20px"></a>
+        </footer>
+    </body>
 </html>
