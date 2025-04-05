@@ -134,13 +134,19 @@ h1 {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                box-shadow 0.4s ease,
+                background-color 0.3s ease;
     font-weight: bold;
     vertical-align: top;
+    position: relative;
+    overflow: hidden;
 }
   
 .competence-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    background-color: var(--beige-clair);
 }
   
 .competence-item img {
@@ -149,6 +155,11 @@ h1 {
     height: 80px;
     margin: 15px auto 0;
     object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.competence-item:hover img {
+    transform: rotate(5deg) scale(1.1);
 }
   
 /* Section expérience professionnelle */
@@ -299,6 +310,37 @@ h1 {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     text-align: center;
     vertical-align: top;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                box-shadow 0.5s ease,
+                background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+  
+.project:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+    background-color: var(--beige-clair);
+}
+
+.project::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, var(--accent), transparent, var(--accent));
+    z-index: -1;
+    transform: scale(0.95);
+    opacity: 0;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+}
+
+.project:hover::before {
+    opacity: 0.7;
+    transform: scale(1);
 }
   
 .project h3 {
@@ -312,6 +354,11 @@ h1 {
     height: 200px;
     border-radius: 5px;
     object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.project:hover img {
+    transform: scale(1.08);
 }
   
 /* Pied de page */
