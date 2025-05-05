@@ -681,7 +681,6 @@ footer a::after {
         flex-direction: column;
         align-items: flex-start;
     }
-    
     h1 {
         font-size: 1.6rem;
     }
