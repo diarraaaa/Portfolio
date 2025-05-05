@@ -691,7 +691,6 @@ footer a::after {
         transform: translateX(-50%);
     }
 }
-
 @media screen and (max-width: 480px) {
     .competence-item {
         width: calc(100% - 30px);
