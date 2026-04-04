@@ -7,18 +7,44 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Epilogue:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg:#F5F2ED; --bg2:#EDE9E2; --card:#FAFAF8; --border:#DAD5CB; --border2:#C8C2B5;
-      --text:#242018; --muted:#786E5E; --subtle:#A09585; --accent:#B05428; --accent2:#C47040;
-      --gold:#A8841E; --sage:#5A8460; --ink:#1C1810;
-      --nav-bg:rgba(245,242,237,0.92); --tag-bg:#EAE5DA; --tag-text:#5A5044;
-      --shadow-sm:0 2px 8px rgba(30,20,10,.05); --shadow-md:0 8px 28px rgba(30,20,10,.08);
+      --bg: #f8fafc;
+      --bg2: #f1f5f9;
+      --card: #ffffff;
+      --border: #e2e8f0;
+      --border2: #cbd5e1;
+      --text: #0f172a;
+      --muted: #475569;
+      --subtle: #94a3b8;
+      --accent: #6366f1; /* Indigo */
+      --accent2: #8b5cf6; /* Violet */
+      --gold: #f59e0b;
+      --sage: #10b981;
+      --ink: #0f172a;
+      --nav-bg: rgba(248, 250, 252, 0.85);
+      --tag-bg: #f1f5f9;
+      --tag-text: #6366f1;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+      --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
     }
     [data-theme="dark"] {
-      --bg:#171410; --bg2:#201C14; --card:#272018; --border:#363020; --border2:#48402E;
-      --text:#EAE4D6; --muted:#988870; --subtle:#685E4A; --accent:#C86030; --accent2:#D87848;
-      --gold:#C09838; --sage:#68A46C; --ink:#F0EAD8;
-      --nav-bg:rgba(23,20,16,0.93); --tag-bg:#302818; --tag-text:#C0AC88;
-      --shadow-sm:0 2px 8px rgba(0,0,0,.3); --shadow-md:0 8px 28px rgba(0,0,0,.35);
+      --bg: #0f172a;
+      --bg2: #1e293b;
+      --card: #1e293b;
+      --border: #334155;
+      --border2: #475569;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --subtle: #64748b;
+      --accent: #818cf8;
+      --accent2: #a78bfa;
+      --gold: #fbbf24;
+      --sage: #34d399;
+      --ink: #f8fafc;
+      --nav-bg: rgba(15, 23, 42, 0.9);
+      --tag-bg: #334155;
+      --tag-text: #a78bfa;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+      --shadow-md: 0 20px 25px -5px rgba(0,0,0,0.4), 0 10px 10px -10px rgba(0,0,0,0.4);
     }
 
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -57,7 +83,20 @@
     @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.6)}}
     h1.hero-name{font-family:'Playfair Display',serif;font-size:clamp(3rem,7vw,7rem);font-weight:900;color:var(--ink);line-height:.95;letter-spacing:-3px;margin-bottom:1.3rem;transition:color .3s}
     h1.hero-name em{font-style:italic;color:var(--accent);display:block}
-    .hero-desc{font-size:.95rem;color:var(--muted);line-height:1.75;max-width:490px;font-weight:300}
+    .hero-desc{font-family:'Epilogue',sans-serif;font-size:.9rem;color:var(--text);line-height:1.6;max-width:520px;font-weight:400;background:linear-gradient(135deg,rgba(176,84,40,.08),rgba(168,132,30,.08));padding:1rem;border-left:3px solid var(--accent);border-radius:0 8px 8px 0}
+    .hero-desc code{background:var(--accent);color:#fff;padding:2px 6px;border-radius:4px;font-weight:500}
+
+    /* TERMINAL STYLE */
+    .terminal{font-family:'Courier New',monospace;font-size:.85rem;background:var(--bg2);color:var(--text);border-radius:12px;padding:1rem;margin:1.5rem 0;max-width:480px;border:1px solid var(--border);position:relative;box-shadow:var(--shadow-sm);line-height:1.6;text-align:left}
+    .terminal-header{display:flex;align-items:center;gap:6px;margin-bottom:12px;border-bottom:1px solid var(--border);padding-bottom:8px}
+    .t-dot{width:10px;height:10px;border-radius:50%}
+    .t-red{background:#ff5f56}.t-amber{background:#ffbd2e}.t-green{background:#27c93f}
+    .t-title{margin-left:10px;font-size:.65rem;color:var(--muted);font-family:'Epilogue',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:1px}
+    .terminal .t-cmd{color:var(--accent2);font-weight:600}
+    .terminal .t-cmd::before{content:'$ ';color:var(--accent)}
+    .terminal .t-out{color:var(--muted);margin-bottom:.4rem}
+    .terminal .cursor{color:var(--accent);animation:blink 1s infinite;display:inline-block;width:8px;height:15px;background:var(--accent);vertical-align:middle;margin-left:4px}
+    @keyframes blink{0%,50%{opacity:1}51%,100%{opacity:0}}
     .hero-actions{display:flex;gap:1rem;margin-top:2.2rem;flex-wrap:wrap}
     .btn-filled{background:var(--accent);color:#fff;padding:11px 26px;border-radius:99px;font-size:.84rem;font-weight:500;text-decoration:none;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 16px rgba(176,84,40,.26)}
     .btn-filled:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(176,84,40,.36)}
@@ -77,14 +116,11 @@
     .skills-masonry{columns:3;column-gap:1.1rem}
     @media(max-width:900px){.skills-masonry{columns:2}}
     @media(max-width:560px){.skills-masonry{columns:1}}
-    .skill-block{break-inside:avoid;background:var(--card);border:1px solid var(--border);border-radius:13px;padding:1.4rem;margin-bottom:1.1rem;transition:transform .25s,box-shadow .25s,background .3s,border-color .3s}
-    .skill-block:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
-    .sb-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.8rem}
-    .sb-icon{width:36px;height:36px;background:var(--tag-bg);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1rem;border:1px solid var(--border);transition:background .3s}
-    .sb-level{font-size:.66rem;color:var(--subtle);font-style:italic;font-family:'Playfair Display',serif}
-    .skill-block h3{font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:.8rem}
-    .pill-wrap{display:flex;flex-wrap:wrap;gap:5px}
-    .spill{background:var(--tag-bg);border:1px solid var(--border);color:var(--tag-text);font-size:.68rem;padding:3px 9px;border-radius:99px;transition:background .2s,color .2s,border-color .3s}
+    .skill-block{break-inside:avoid;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.4rem;margin-bottom:1.1rem;transition:transform .25s,box-shadow .25s,border-color .3s}
+    .skill-block:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:var(--accent)}
+    .skill-block h3{color:var(--text);font-size:.9rem;margin-bottom:.8rem;font-weight:600}
+    .pill-wrap{display:flex;flex-wrap:wrap;gap:6px}
+    .spill{background:var(--tag-bg);border:1px solid var(--border);color:var(--tag-text);font-size:.7rem;padding:4px 10px;border-radius:6px;transition:all .2s ease}
     .spill:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
 
     /* EXPERIENCE */
@@ -119,31 +155,33 @@
     @media(max-width:560px){.proj-grid{grid-template-columns:1fr}}
 
     .pcard{
-      background:var(--card);border:1px solid var(--border);border-radius:13px;
+      background:var(--card);border:1px solid var(--border);border-radius:12px;
       padding:1.35rem;display:flex;flex-direction:column;
-      transition:transform .25s,box-shadow .25s,background .3s,border-color .3s;
-      position:relative;overflow:hidden
+      transition:transform .25s,box-shadow .25s,border-color .3s;
+      position:relative;overflow:hidden;
+      box-shadow:var(--shadow-sm);
     }
-    .pcard::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--gold));opacity:0;transition:opacity .25s}
-    .pcard:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+    .pcard::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));opacity:0;transition:opacity .25s}
+    .pcard:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--accent)}
     .pcard:hover::after{opacity:1}
 
     .pcard-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.7rem}
     .pcard-left{display:flex;align-items:center;gap:9px}
     .pcard-icon{width:34px;height:34px;flex-shrink:0;background:var(--tag-bg);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.9rem;transition:background .3s}
-    .pcard h3{font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:var(--ink);line-height:1.2;transition:color .3s}
-    .pcard-sub{font-size:.62rem;color:var(--subtle);margin-top:1px}
-    .plink{width:26px;height:26px;flex-shrink:0;background:var(--tag-bg);border:1px solid var(--border);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--muted);text-decoration:none;font-size:.74rem;transition:background .2s,color .2s;margin-left:5px}
+    .pcard h3{font-family:'Epilogue',sans-serif;font-size:.95rem;font-weight:600;color:var(--text);line-height:1.2;margin-bottom:.3rem;text-transform:none}
+    .pcard-sub{font-size:.65rem;color:var(--muted);margin-top:1px;font-family:'Epilogue',sans-serif;font-weight:500}
+    .plink{background:var(--tag-bg);border:1px solid var(--border);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--accent);text-decoration:none;font-size:.74rem;margin-left:5px;width:30px;height:30px;transition:all .2s ease}
     .plink:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
 
-    .pcard-desc{font-size:.78rem;color:var(--muted);line-height:1.65;flex:1;margin-bottom:.9rem}
+    .pcard-desc{font-size:.8rem;color:var(--muted);line-height:1.65;flex:1;margin-bottom:1rem}
 
-    .award{display:flex;align-items:flex-start;gap:5px;background:rgba(168,132,30,.08);border:1px solid rgba(168,132,30,.22);color:var(--gold);font-size:.67rem;font-weight:500;padding:5px 9px;border-radius:6px;line-height:1.45;margin-bottom:.8rem;transition:background .3s}
-    .award::before{content:'🏆';flex-shrink:0}
+    .award{background:rgba(16, 185, 129, 0.1);border:1px solid rgba(16, 185, 129, 0.2);color:var(--sage);font-size:.67rem;font-weight:600;padding:6px 10px;border-radius:6px;line-height:1.45;margin-bottom:.8rem}
+    .award::before{content:'🏆';margin-right:6px}
 
-    .stack-label{font-size:.58rem;text-transform:uppercase;letter-spacing:.12em;color:var(--subtle);font-weight:600;margin-bottom:.35rem}
-    .stack-tags{display:flex;flex-wrap:wrap;gap:4px}
-    .stag{background:var(--tag-bg);border:1px solid var(--border);color:var(--tag-text);font-size:.65rem;font-weight:500;padding:2px 8px;border-radius:4px;transition:background .3s,color .3s,border-color .3s}
+    .stack-label{font-size:.6rem;color:var(--accent);text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:.5rem;font-family:'Epilogue',sans-serif}
+    .stack-tags{display:flex;flex-wrap:wrap;gap:6px}
+    .stag{background:var(--bg2);border:1px solid var(--border);color:var(--muted);font-size:.65rem;font-weight:500;padding:3px 10px;border-radius:6px;font-family:'Epilogue',sans-serif;transition:all .2s ease}
+    .stag:hover{background:var(--accent);border-color:var(--accent);color:#fff}
 
     /* CONTACT */
     #contact{background:var(--ink);padding:88px 6%;text-align:center;position:relative;overflow:hidden;transition:background .3s}
@@ -198,7 +236,24 @@
   <div class="hero-inner">
     <div class="hero-tag appear">Available · AI & Data Science Internship</div>
     <h1 class="hero-name appear" style="transition-delay:.06s">Mame<br><em>Diarra</em>Dieng</h1>
-    <p class="hero-desc appear" style="transition-delay:.12s">Engineering student at ESP Dakar in AI & Big Data. I turn raw data into intelligent decisions — pipelines, models, dashboards, IoT.</p>
+    <p class="hero-desc appear" style="transition-delay:.12s">Engineering student at ESP Dakar. Architect of innovative solutions focused on data and artificial intelligence.</p>
+    <div class="terminal appear" style="transition-delay:.15s">
+      <div class="terminal-header">
+        <div class="t-dot t-red"></div>
+        <div class="t-dot t-amber"></div>
+        <div class="t-dot t-green"></div>
+        <span class="t-title">bash — 80×24</span>
+      </div>
+      <div class="terminal-body">
+        <div class="t-cmd">whoami</div>
+        <div class="t-out">Mame Diarra Dieng</div>
+        <div class="t-cmd">cd expertise/ai</div>
+        <div class="t-cmd">ls</div>
+        <div class="t-out">Machine_Learning, NLP, Computer_Vision</div>
+        <div class="t-cmd">./run_impact.sh</div>
+        <div class="t-out">✨ Ready for new challenges!<span class="cursor"></span></div>
+      </div>
+    </div>
     <div class="hero-actions appear" style="transition-delay:.18s">
       <a href="#projets" class="btn-filled">View my projects</a>
       <a href="#contact" class="btn-outline">Contact me</a>
@@ -212,34 +267,34 @@
     <div class="sec-title">My <em>Skills</em></div>
     <div class="skills-masonry">
       <div class="skill-block appear">
-        <div class="sb-top"><div class="sb-icon">🐍</div><span class="sb-level">Advanced</span></div>
+        <div class="sb-top"><div class="sb-icon">🐍</div></div>
         <h3>Languages</h3>
-        <div class="pill-wrap"><span class="spill">Python</span><span class="spill">SQL</span><span class="spill">PHP</span><span class="spill">C</span><span class="spill">Java</span><span class="spill">HTML/CSS</span></div>
+        <div class="pill-wrap"><span class="spill">Python</span><span class="spill">SQL</span><span class="spill">JavaScript</span><span class="spill">C</span><span class="spill">Java</span><span class="spill">HTML/CSS</span></div>
       </div>
       <div class="skill-block appear">
-        <div class="sb-top"><div class="sb-icon">🤖</div><span class="sb-level">Growing</span></div>
-        <h3>IA & Data Science</h3>
-        <div class="pill-wrap"><span class="spill">Machine Learning</span><span class="spill">Pandas</span><span class="spill">NumPy</span><span class="spill">Matplotlib</span><span class="spill">Ollama / LLM</span><span class="spill">Grok AI</span><span class="spill">Data Mining</span></div>
+        <div class="sb-top"><div class="sb-icon">🤖</div></div>
+        <h3>AI & Machine Learning</h3>
+        <div class="pill-wrap"><span class="spill">TensorFlow</span><span class="spill">Scikit-learn</span><span class="spill">Hugging Face</span><span class="spill">LLMs</span><span class="spill">NLP</span><span class="spill">Vision</span></div>
       </div>
       <div class="skill-block appear">
-        <div class="sb-top"><div class="sb-icon">☁️</div><span class="sb-level">Intermediate</span></div>
-        <h3>Cloud & DevOps</h3>
-        <div class="pill-wrap"><span class="spill">AWS</span><span class="spill">Linux</span><span class="spill">Git / GitHub</span><span class="spill">n8n</span><span class="spill">ELK Stack</span></div>
+        <div class="sb-top"><div class="sb-icon">☁️</div></div>
+        <h3>Infrastructure & Cloud</h3>
+        <div class="pill-wrap"><span class="spill">AWS</span><span class="spill">Docker</span><span class="spill">Linux</span><span class="spill">Git</span><span class="spill">CI/CD</span><span class="spill">n8n</span></div>
       </div>
       <div class="skill-block appear">
-        <div class="sb-top"><div class="sb-icon">🗄️</div><span class="sb-level">Advanced</span></div>
-        <h3>Databases</h3>
-        <div class="pill-wrap"><span class="spill">MySQL</span><span class="spill">PostgreSQL</span><span class="spill">NoSQL</span><span class="spill">Supabase</span><span class="spill">Elasticsearch</span></div>
+        <div class="sb-top"><div class="sb-icon">🗄️</div></div>
+        <h3>Data Engineering</h3>
+        <div class="pill-wrap"><span class="spill">PostgreSQL</span><span class="spill">MongoDB</span><span class="spill">Redis</span><span class="spill">ETL</span><span class="spill">Spark</span></div>
       </div>
       <div class="skill-block appear">
-        <div class="sb-top"><div class="sb-icon">🚀</div><span class="sb-level">Advanced</span></div>
-        <h3>Frameworks & Backend</h3>
-        <div class="pill-wrap"><span class="spill">Flask</span><span class="spill">Django</span><span class="spill">React JS</span><span class="spill">REST API</span><span class="spill">Arduino</span><span class="spill">Twilio API</span></div>
+        <div class="sb-top"><div class="sb-icon">🚀</div></div>
+        <h3>Backend & APIs</h3>
+        <div class="pill-wrap"><span class="spill">FastAPI</span><span class="spill">Flask</span><span class="spill">Node.js</span><span class="spill">REST</span><span class="spill">WebSockets</span><span class="spill">Microservices</span></div>
       </div>
       <div class="skill-block appear">
-        <div class="sb-top"><div class="sb-icon">📊</div><span class="sb-level">Intermediate</span></div>
+        <div class="sb-top"><div class="sb-icon">📊</div></div>
         <h3>Business Intelligence</h3>
-        <div class="pill-wrap"><span class="spill">Kibana</span><span class="spill">Logstash</span><span class="spill">Dashboards</span><span class="spill">Odoo</span><span class="spill">Wix</span></div>
+        <div class="pill-wrap"><span class="spill">Tableau</span><span class="spill">Power BI</span><span class="spill">Kibana</span><span class="spill">Streamlit</span><span class="spill">Plotly</span></div>
       </div>
     </div>
   </div>
@@ -288,13 +343,14 @@
       <div class="pcard appear">
         <div class="pcard-top">
           <div class="pcard-left">
-            <div class="pcard-icon">📚</div>
-            <div><h3>StudyAI</h3><p class="pcard-sub">AI · Education · React</p></div>
+            <div class="pcard-icon">🤖</div>
+            <div><h3>Book Recommendation Model</h3><p class="pcard-sub">AI · Machine Learning · Hugging Face</p></div>
           </div>
+          <a href="https://diarradg-book-recommandation-model.hf.space/" target="_blank" class="plink">↗</a>
         </div>
-        <p class="pcard-desc">AI-powered learning assistant. Generates text explanations, flashcards, interactive quizzes and personalized web resources based on any topic.</p>
+        <p class="pcard-desc">Intelligent book recommendation system using AI models to suggest personalized books based on user preferences.</p>
         <div class="stack-label">Stack</div>
-        <div class="stack-tags"><span class="stag">React JS</span><span class="stag">Supabase</span><span class="stag">Grok AI</span></div>
+        <div class="stack-tags"><span class="stag">Python</span><span class="stag">Hugging Face</span><span class="stag">Transformers</span><span class="stag">Machine Learning</span></div>
       </div>
 
       <div class="pcard appear">
@@ -327,25 +383,13 @@
       <div class="pcard appear">
         <div class="pcard-top">
           <div class="pcard-left">
-            <div class="pcard-icon">💰</div>
-            <div><h3>School Budget</h3><p class="pcard-sub">Finance · Dashboard</p></div>
+            <div class="pcard-icon">📚</div>
+            <div><h3>StudyAI</h3><p class="pcard-sub">AI · Education · React</p></div>
           </div>
         </div>
-        <p class="pcard-desc">School budget management system with interactive dashboards, secure authentication and role-based access.</p>
+        <p class="pcard-desc">AI-powered learning assistant. Generates text explanations, flashcards, interactive quizzes and personalized web resources based on any topic.</p>
         <div class="stack-label">Stack</div>
-        <div class="stack-tags"><span class="stag">Flask</span><span class="stag">MySQL</span><span class="stag">Supabase</span></div>
-      </div>
-
-      <div class="pcard appear">
-        <div class="pcard-top">
-          <div class="pcard-left">
-            <div class="pcard-icon">📝</div>
-            <div><h3>NoteBook</h3><p class="pcard-sub">Web · PHP</p></div>
-          </div>
-        </div>
-        <p class="pcard-desc">Web-based note-taking app with user account management and category organization.</p>
-        <div class="stack-label">Stack</div>
-        <div class="stack-tags"><span class="stag">PHP</span><span class="stag">MySQL</span><span class="stag">HTML/CSS</span></div>
+        <div class="stack-tags"><span class="stag">React JS</span><span class="stag">Supabase</span><span class="stag">Grok AI</span></div>
       </div>
 
       <div class="pcard appear">
@@ -377,7 +421,7 @@
       <a href="https://portfoliodiarra.netlify.app/" target="_blank" class="soc-btn">⊕ Portfolio live</a>
       <a href="tel:+221786321746" class="soc-btn">✆ +221 78 632 17 46</a>
     </div>
-    <div class="footer-line">Made with <span>♥</span> by Mame Diarra Dieng · 2025</div>
+    <div class="footer-line">Made with <span>♥</span> by Mame Diarra Dieng · 2026</div>
   </div>
 </div>
 
@@ -410,6 +454,51 @@
     entries.forEach((e,i)=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('visible'),i*75)});
   },{threshold:.07});
   document.querySelectorAll('.appear').forEach(el=>obs.observe(el));
+
+  const obsItems = document.querySelectorAll('.appear');
+  obsItems.forEach(i => obs.observe(i));
+
+  async function runTerminal() {
+    const body = document.querySelector('.terminal-body');
+    if (!body) return;
+    const lines = Array.from(body.children);
+    const data = lines.map(l => ({ 
+      html: l.innerHTML, 
+      isCmd: l.classList.contains('t-cmd'),
+      el: l 
+    }));
+    
+    body.innerHTML = '';
+    
+    for (const line of data) {
+      const newEl = document.createElement('div');
+      newEl.className = line.isCmd ? 't-cmd' : 't-out';
+      body.appendChild(newEl);
+      
+      if (line.isCmd) {
+        const text = line.html;
+        for (let i = 0; i < text.length; i++) {
+          newEl.textContent += text[i];
+          await new Promise(r => setTimeout(r, 45));
+        }
+      } else {
+        newEl.innerHTML = line.html;
+      }
+      await new Promise(r => setTimeout(r, 500));
+    }
+  }
+
+  const termObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(e.isIntersecting) {
+        runTerminal();
+        termObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  
+  const termEl = document.querySelector('.terminal');
+  if(termEl) termObs.observe(termEl);
   setTimeout(()=>document.querySelectorAll('#Presentation .appear').forEach(el=>el.classList.add('visible')),120);
 </script>
 </body>
